@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "jest"
+    "test": "jest",
+    "build": "echo 'Build ejecutado correctamente'"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -18,7 +19,4 @@
     "jest": "^29.0.0",
     "supertest": "^6.3.0"
   }
-  "scripts": {
-  "build": "echo 'Build ejecutado correctamente'"
-}
 }
