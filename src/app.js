@@ -16,6 +16,16 @@ app.get('/api', async (req, res) => {
     }
 });
 
+app.get('/monitor', (req, res) => {
+    const uptime = process.uptime(); // Tiempo de actividad de la aplicación en segundos
+    const timestamp = new Date().toISOString(); // Marca de tiempo actual
+
+    res.json({
+        status: 'OK', // Estado de la aplicación
+        uptime: uptime, // Tiempo de actividad de la aplicación
+        timestamp: timestamp // Marca de tiempo
+    });
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en el puerto ${PORT}`);
